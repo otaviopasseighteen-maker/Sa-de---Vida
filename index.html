@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Saúde & Vida — uma experiência sobre tecnologia, emoções, hábitos e bem-estar.">
+  <title>Saúde & Vida</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Saúde & Vida">
+      <span class="brand-mark">+</span>
+      <span>SAÚDE<span>&</span>VIDA</span>
+    </a>
+
+    <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+
+    <nav class="nav" aria-label="Navegação principal">
+      <a href="#entenda">Entenda</a>
+      <a href="#seu-uso">Seu uso</a>
+      <a href="#emocoes">Emoções</a>
+      <a href="#equilibrio">Equilíbrio</a>
+      <a href="#pesquisa">Pesquisa</a>
+    </nav>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="hero-glow glow-one"></div>
+      <div class="hero-glow glow-two"></div>
+
+      <div class="hero-content">
+        <p class="eyebrow">TECNOLOGIA • MENTE • VIDA</p>
+        <h1>Quanto da sua vida<br><strong>acontece através de uma tela?</strong></h1>
+        <p class="hero-text">
+          A tecnologia faz parte da nossa vida. A proposta aqui não é fugir dela,
+          mas entender como podemos usá-la de uma forma mais consciente e saudável.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#entenda">Começar a entender</a>
+          <a class="button ghost" href="#seu-uso">Olhar para meu uso</a>
+        </div>
+      </div>
+
+      <div class="hero-orbit" aria-hidden="true">
+        <div class="orbit orbit-outer"></div>
+        <div class="orbit orbit-inner"></div>
+        <div class="orbit-dot dot-one"></div>
+        <div class="orbit-dot dot-two"></div>
+        <div class="orbit-dot dot-three"></div>
+        <div class="core">+</div>
+      </div>
+    </section>
+
+    <section class="intro section" id="entenda">
+      <div class="section-heading">
+        <p class="eyebrow">01 / ENTENDA</p>
+        <h2>A tecnologia não é o problema.<br><span>A relação com ela importa.</span></h2>
+        <p>
+          Nesta primeira base, vamos explorar de maneira simples temas como
+          recompensa, atenção, sono, ansiedade e hábitos digitais.
+        </p>
+      </div>
+
+      <div class="cards three">
+        <article class="info-card">
+          <span class="card-number">01</span>
+          <div class="icon">◉</div>
+          <h3>Cérebro & recompensa</h3>
+          <p>Entenda como mecanismos de recompensa participam dos nossos hábitos e comportamentos.</p>
+          <a href="#conteudo">Explorar →</a>
+        </article>
+
+        <article class="info-card">
+          <span class="card-number">02</span>
+          <div class="icon">◌</div>
+          <h3>Atenção & telas</h3>
+          <p>Observe como notificações, estímulos e interrupções podem influenciar nossa rotina.</p>
+          <a href="#conteudo">Explorar →</a>
+        </article>
+
+        <article class="info-card">
+          <span class="card-number">03</span>
+          <div class="icon">☾</div>
+          <h3>Sono & ansiedade</h3>
+          <p>Conheça fatores relacionados ao uso de tecnologia e à qualidade da nossa vida cotidiana.</p>
+          <a href="#conteudo">Explorar →</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="usage section dark-section" id="seu-uso">
+      <div class="section-heading compact">
+        <p class="eyebrow">02 / SEU USO</p>
+        <h2>Antes de mudar, <span>observe.</span></h2>
+        <p>Uma pequena reflexão sobre o seu tempo conectado.</p>
+      </div>
+
+      <div class="usage-panel">
+        <div>
+          <p class="panel-label">CHECK-IN RÁPIDO</p>
+          <h3>Quanto tempo você passa diante das telas por dia?</h3>
+          <p class="muted">Use o controle abaixo para visualizar uma estimativa.</p>
+        </div>
+
+        <div class="range-area">
+          <output id="screen-output">5h</output>
+          <input id="screen-range" type="range" min="0" max="16" value="5" aria-label="Horas de tela por dia">
+          <div class="range-labels"><span>0h</span><span>8h</span><span>16h+</span></div>
+        </div>
+
+        <div class="usage-result">
+          <span id="usage-message">Um ponto de partida para observar seus hábitos.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="emotions section" id="emocoes">
+      <div class="section-heading">
+        <p class="eyebrow">03 / EMOÇÕES</p>
+        <h2>Nomear o que sentimos<br><span>também é cuidado.</span></h2>
+        <p>
+          Emoções não são defeitos para esconder. Identificá-las pode ser o primeiro
+          passo para perceber o que está acontecendo.
+        </p>
+      </div>
+
+      <div class="emotion-grid" id="emotion-grid">
+        <button class="emotion" data-emotion="Ansiedade"><span>~</span> Ansiedade</button>
+        <button class="emotion" data-emotion="Cansaço"><span>◒</span> Cansaço</button>
+        <button class="emotion" data-emotion="Estresse"><span>!</span> Estresse</button>
+        <button class="emotion" data-emotion="Solidão"><span>○</span> Solidão</button>
+        <button class="emotion" data-emotion="Desânimo"><span>↓</span> Desânimo</button>
+        <button class="emotion" data-emotion="Tranquilidade"><span>+</span> Tranquilidade</button>
+      </div>
+
+      <div class="emotion-response" id="emotion-response" aria-live="polite">
+        Escolha uma emoção para iniciar a reflexão.
+      </div>
+    </section>
+
+    <section class="balance section" id="equilibrio">
+      <div class="section-heading compact">
+        <p class="eyebrow">04 / EQUILÍBRIO</p>
+        <h2>Seu cérebro também precisa de <span>vida offline.</span></h2>
+      </div>
+
+      <div class="balance-grid">
+        <article><strong>01</strong><h3>Movimento</h3><p>Atividade física faz parte de uma rotina de cuidado integral.</p></article>
+        <article><strong>02</strong><h3>Alimentação</h3><p>Uma alimentação adequada contribui para a saúde e o bem-estar.</p></article>
+        <article><strong>03</strong><h3>Sono</h3><p>Descanso e regularidade ajudam a sustentar atenção e disposição.</p></article>
+        <article><strong>04</strong><h3>Vida offline</h3><p>Relacionamentos, hobbies e momentos longe da tela também importam.</p></article>
+      </div>
+    </section>
+
+    <section class="research section dark-section" id="pesquisa">
+      <div class="research-copy">
+        <p class="eyebrow">05 / PESQUISA</p>
+        <h2>Como as pessoas<br><span>se relacionam com a tecnologia?</span></h2>
+        <p>
+          Esta área será usada para reunir dados, percepções e depoimentos.
+          A ideia é transformar o site em uma experiência informativa construída
+          também a partir da realidade das pessoas.
+        </p>
+        <a class="button primary" href="#pesquisa">Participar em breve</a>
+      </div>
+
+      <div class="research-box">
+        <span class="big-number">?</span>
+        <p>VOCÊ SABE<br><strong>QUANTO USA?</strong></p>
+        <small>Pesquisa em construção</small>
+      </div>
+    </section>
+
+    <section class="final-cta section">
+      <p class="eyebrow">TECNOLOGIA A FAVOR DA VIDA</p>
+      <h2>Conectar-se também pode<br><span>ser uma escolha consciente.</span></h2>
+      <p>Conhecimento, pequenos hábitos e atenção ao que sentimos podem mudar a forma como usamos a tecnologia.</p>
+      <a class="button primary" href="#inicio">Voltar ao início ↑</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>
+      <strong>SAÚDE & VIDA</strong>
+      <p>Informação para uma relação mais consciente com a tecnologia.</p>
+    </div>
+    <span>Projeto em desenvolvimento • 2026</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
