@@ -99,19 +99,21 @@
     const completed = habits.filter(habit => data.days[dateKey].habits[habit.id]).length;
     const percent = Math.round(completed / habits.length * 100);
     if (progressBar) progressBar.style.width = percent + "%";
+    const progressTrack = document.querySelector("#habit-progress");
+    if (progressTrack) progressTrack.setAttribute("aria-valuenow", String(percent));
     if (progressText) progressText.textContent = completed + " de " + habits.length + " hábitos concluídos hoje (" + percent + "%).";
   }
 
   function renderHistory() {
     if (!historyList) return;
     const entries = Object.entries(data.days)
-      .filter(([, day]) => day && (day.mood || day.sleep != null || day.energy != null || (day.note && day.note.length)))
+      .filter(([, day]) => day && (day.mood || day.sleep != null || day.energy != null || (day.note && day.note.length) || (day.habits && Object.values(day.habits).some(Boolean))))
       .sort(([a], [b]) => b.localeCompare(a))
       .slice(0, 7);
     historyList.innerHTML = entries.length ? entries.map(([date, day]) => {
       const [, month, datePart] = date.split("-");
       const formatted = date === dateKey ? "Hoje" : datePart + "/" + month;
-      const details = [day.mood ? moodLabels[day.mood] || day.mood : "", day.sleep != null ? day.sleep + "h de sono" : "", day.energy != null ? "energia " + day.energy + "/5" : ""].filter(Boolean).join(" · ");
+      const details = [day.mood ? moodLabels[day.mood] || day.mood : "", day.sleep != null ? day.sleep + "h de sono" : "", day.energy != null ? "energia " + day.energy + "/5" : "", day.habits ? habits.filter(habit => day.habits[habit.id]).length + " hábitos" : ""].filter(Boolean).join(" · ");
       return "<li><span>" + formatted + "</span><strong>" + details.replace(/[<>]/g, "") + "</strong></li>";
     }).join("") : '<li><span>Nenhum check-in registrado ainda.</span></li>';
     if (historySummary) {
