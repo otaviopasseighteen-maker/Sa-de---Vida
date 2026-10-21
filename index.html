@@ -6,6 +6,7 @@
   <meta name="description" content="Saúde & Vida — uma experiência sobre tecnologia, emoções, hábitos e bem-estar.">
   <title>Saúde & Vida</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="wellness.css">
 </head>
 <body>
   <header class="site-header">
@@ -154,6 +155,65 @@
       </div>
     </section>
 
+
+    <section class="wellness-tools" id="bem-estar">
+      <div class="tools-heading">
+        <p class="eyebrow">FERRAMENTAS • SEU BEM-ESTAR</p>
+        <h2>Pequenos passos.<br><span>Mais atenção a você.</span></h2>
+        <p class="tools-intro">Um espaço simples para fazer seu check-in, acompanhar hábitos e perceber padrões com gentileza — sem notas, cobranças ou diagnósticos.</p>
+      </div>
+
+      <div class="wellness-layout">
+        <article class="wellness-card">
+          <h3>Como você está hoje?</h3>
+          <p class="card-description">Reserve um instante para perceber como está se sentindo.</p>
+          <form id="wellness-form">
+            <fieldset style="border:0;min-width:0">
+              <legend>Escolha o que mais se aproxima do seu momento</legend>
+              <div class="mood-options">
+                <button class="mood-choice" type="button" data-mood="great" aria-pressed="false"><span>☀️</span>Muito bem</button>
+                <button class="mood-choice" type="button" data-mood="okay" aria-pressed="false"><span>🙂</span>Bem</button>
+                <button class="mood-choice" type="button" data-mood="neutral" aria-pressed="false"><span>😐</span>Mais ou menos</button>
+                <button class="mood-choice" type="button" data-mood="low" aria-pressed="false"><span>🌧️</span>Em baixo</button>
+                <button class="mood-choice" type="button" data-mood="stressed" aria-pressed="false"><span>🌪️</span>Estressado(a)</button>
+                <button class="mood-choice" type="button" data-mood="tired" aria-pressed="false"><span>🌙</span>Cansado(a)</button>
+              </div>
+            </fieldset>
+            <label for="wellness-sleep">Quantas horas você dormiu? (opcional)</label>
+            <input id="wellness-sleep" type="number" min="0" max="24" step="0.5" inputmode="decimal" placeholder="Ex.: 7,5">
+            <label for="wellness-energy">Como está sua disposição? (opcional)</label>
+            <select id="wellness-energy">
+              <option value="">Prefiro não responder</option>
+              <option value="1">1 — Muito baixa</option>
+              <option value="2">2 — Baixa</option>
+              <option value="3">3 — Média</option>
+              <option value="4">4 — Boa</option>
+              <option value="5">5 — Muito boa</option>
+            </select>
+            <label for="wellness-note">Uma observação para você (opcional)</label>
+            <textarea id="wellness-note" maxlength="280" rows="3" placeholder="O que você gostaria de lembrar sobre hoje?"></textarea>
+            <button class="wellness-submit" type="submit">Salvar meu check-in</button>
+            <p class="wellness-status" id="wellness-status" aria-live="polite" role="status"></p>
+          </form>
+          <p class="privacy-note">Seus registros ficam no armazenamento local deste navegador. Não são enviados a um servidor.</p>
+        </article>
+
+        <article class="wellness-card">
+          <h3>Hábitos que cuidam de você</h3>
+          <p class="card-description">Marque os pequenos passos que fizer hoje. Cada pessoa tem sua própria rotina.</p>
+          <div class="habit-progress" role="progressbar" aria-label="Hábitos concluídos hoje" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="habit-progress"><span id="habit-progress-fill"></span></div>
+          <p class="habit-summary" id="habit-progress-text">0 de 5 hábitos concluídos hoje (0%).</p>
+          <div class="habit-list" id="habit-list"></div>
+          <div class="wellness-history">
+            <h4>Seus check-ins recentes</h4>
+            <p class="habit-summary" id="wellness-history-summary">Seus registros aparecerão aqui.</p>
+            <ul class="history-list" id="wellness-history-list"><li><span>Nenhum check-in registrado ainda.</span></li></ul>
+          </div>
+          <p class="privacy-note">Use como ferramenta de reflexão, não como avaliação médica. Você pode apagar esses dados limpando os dados do site no navegador.</p>
+        </article>
+      </div>
+    </section>
+
     <section class="research section dark-section" id="pesquisa">
       <div class="research-copy">
         <p class="eyebrow">05 / PESQUISA</p>
@@ -190,5 +250,6 @@
   </footer>
 
   <script src="script.js"></script>
+  <script src="wellness.js"></script>
 </body>
 </html>
