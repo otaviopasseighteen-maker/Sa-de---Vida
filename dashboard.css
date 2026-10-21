@@ -1,0 +1,29 @@
+/* Painel semanal de bem-estar */
+.wellness-dashboard { margin-top: 28px; padding: 28px; border: 1px solid var(--line); border-radius: 18px; background: linear-gradient(145deg, rgba(143,134,255,.08), rgba(66,217,200,.035)); }
+.dashboard-heading { display:flex; flex-wrap:wrap; justify-content:space-between; align-items:end; gap:12px; margin-bottom:22px; }
+.dashboard-heading h3 { font-size:1.45rem; margin-bottom:6px; }
+.dashboard-heading p { color:var(--muted); font-size:.9rem; }
+.dashboard-period { color:var(--accent-2); font-size:.8rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; }
+.dashboard-stats { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin-bottom:24px; }
+.dashboard-stat { padding:17px; border:1px solid var(--line); border-radius:13px; background:rgba(7,11,17,.55); }
+.dashboard-stat span { display:block; color:var(--muted); font-size:.8rem; margin-bottom:8px; }
+.dashboard-stat strong { display:block; font:600 clamp(1.35rem,3vw,2rem)/1.1 "Space Grotesk",sans-serif; letter-spacing:-.04em; }
+.dashboard-stat small { display:block; color:#8b96a6; font-size:.75rem; margin-top:7px; }
+.week-chart { display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); gap:10px; align-items:end; }
+.week-day { min-width:0; text-align:center; }
+.week-day .bar-value { display:block; color:var(--muted); font-size:.72rem; margin-bottom:7px; }
+.week-bar-track { height:116px; display:flex; align-items:flex-end; justify-content:center; padding:0 3px; border-radius:8px; background:rgba(255,255,255,.035); overflow:hidden; }
+.week-bar { width:min(100%,28px); min-height:3px; border-radius:7px 7px 3px 3px; background:linear-gradient(180deg,var(--accent-2),#8f86ff); transition:height .25s ease; }
+.week-day .day-label { display:block; color:var(--muted); font-size:.75rem; margin-top:9px; }
+.week-day.today .day-label { color:var(--text); font-weight:700; }
+.dashboard-footnote { color:#8b96a6; font-size:.78rem; margin-top:17px; }
+.dashboard-empty { padding:16px; border:1px dashed var(--line); border-radius:12px; color:var(--muted); font-size:.9rem; }
+@media(max-width:760px) {
+ .wellness-dashboard { padding:20px; }
+ .dashboard-stats { grid-template-columns:1fr; }
+ .dashboard-stat { padding:14px; }
+ .week-chart { gap:5px; }
+ .week-bar-track { height:90px; }
+ .week-day .day-label { font-size:.68rem; }
+}
+@media(prefers-reduced-motion:reduce) { .week-bar { transition:none; } }
