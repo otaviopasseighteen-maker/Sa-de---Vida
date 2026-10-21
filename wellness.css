@@ -1,0 +1,43 @@
+/* Recursos de bem-estar — camada adicional, mantendo o visual original */
+.wellness-tools { max-width: var(--max); margin: 0 auto; padding: 100px 5vw; }
+.wellness-tools .tools-heading { max-width: 760px; margin-bottom: 38px; }
+.wellness-tools h2 { font: 600 clamp(2.2rem, 5vw, 4rem)/1.08 "Space Grotesk", sans-serif; letter-spacing: -.045em; }
+.wellness-tools h2 span { color: #8f86ff; }
+.wellness-tools .tools-intro { color: var(--muted); margin-top: 16px; max-width: 680px; }
+.wellness-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; align-items: start; }
+.wellness-card { min-width: 0; padding: 28px; background: linear-gradient(145deg, var(--panel), #0b0f16); border: 1px solid var(--line); border-radius: 18px; }
+.wellness-card h3 { font-size: 1.45rem; margin-bottom: 8px; }
+.wellness-card .card-description { color: var(--muted); font-size: .9rem; margin-bottom: 22px; }
+.wellness-card label, .wellness-card legend { display: block; color: #dfe4eb; font-size: .9rem; font-weight: 600; margin-bottom: 8px; }
+.wellness-card input[type="text"], .wellness-card input[type="number"], .wellness-card select, .wellness-card textarea { width: 100%; padding: 12px 13px; border: 1px solid var(--line); border-radius: 10px; background: #080c12; color: var(--text); margin-bottom: 16px; }
+.wellness-card input:focus-visible, .wellness-card select:focus-visible, .wellness-card textarea:focus-visible, .wellness-card button:focus-visible, .wellness-card a:focus-visible { outline: 2px solid var(--accent-2); outline-offset: 3px; }
+.mood-options { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin: 10px 0 18px; }
+.mood-choice { padding: 12px 8px; border: 1px solid var(--line); border-radius: 11px; background: #0a0e15; color: var(--text); cursor: pointer; }
+.mood-choice[aria-pressed="true"] { border-color: var(--accent-2); background: rgba(66,217,200,.1); box-shadow: inset 0 0 0 1px rgba(66,217,200,.12); }
+.mood-choice span { display: block; font-size: 1.5rem; margin-bottom: 3px; }
+.wellness-submit { width: 100%; border: 0; border-radius: 10px; padding: 13px 16px; background: var(--white); color: #090b10; font-weight: 700; cursor: pointer; transition: transform .2s, opacity .2s; }
+.wellness-submit:hover { transform: translateY(-1px); }
+.wellness-submit:disabled { opacity: .45; cursor: not-allowed; }
+.wellness-status { min-height: 24px; margin-top: 12px; color: var(--accent-2); font-size: .88rem; }
+.habit-list { display: grid; gap: 10px; margin: 14px 0 20px; }
+.habit-item { display: flex; align-items: center; gap: 12px; padding: 13px; border: 1px solid var(--line); border-radius: 11px; background: rgba(255,255,255,.02); cursor: pointer; }
+.habit-item input { width: 18px; height: 18px; accent-color: var(--accent-2); flex: 0 0 auto; }
+.habit-item span { flex: 1; }
+.habit-item small { color: var(--muted); }
+.habit-progress { height: 8px; border-radius: 99px; background: #252c37; overflow: hidden; margin: 12px 0 8px; }
+.habit-progress span { display: block; height: 100%; width: 0; background: linear-gradient(90deg, var(--accent), var(--accent-2)); transition: width .25s; }
+.habit-summary { color: var(--muted); font-size: .88rem; }
+.wellness-history { margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--line); }
+.wellness-history h4 { font: 600 1rem "Space Grotesk", sans-serif; margin-bottom: 10px; }
+.history-list { list-style: none; display: grid; gap: 8px; }
+.history-list li { display: flex; justify-content: space-between; gap: 12px; color: var(--muted); font-size: .86rem; }
+.history-list strong { color: var(--text); font-weight: 600; }
+.privacy-note { color: #8b96a6; font-size: .78rem; margin-top: 16px; }
+@media (max-width: 760px) {
+  .wellness-tools { padding: 82px 5vw; }
+  .wellness-layout { grid-template-columns: 1fr; }
+  .wellness-card { padding: 22px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .wellness-submit, .habit-progress span { transition: none; }
+}
