@@ -13,7 +13,6 @@
     {name:"Conexão social",description:"Percepção de afastamento, apoio ou dificuldade de conviver.",questions:["Tenho evitado conversar ou estar com outras pessoas.","Tenho me sentido sozinho(a), mesmo quando há pessoas por perto.","Tenho dificuldade de pedir ajuda ou falar sobre o que sinto."]},
     {name:"Energia e concentração",description:"Disposição, foco e impacto das emoções nas tarefas do cotidiano.",questions:["Tenho sentido pouca energia para realizar tarefas diárias.","Tenho dificuldade de manter a concentração ou tomar decisões.","As emoções ou preocupações têm atrapalhado minha rotina."]}
   ];
-  const total = areas.reduce((sum,a)=>sum+a.aquestions,0);
   const questions = areas.flatMap(area => area.questions.map(q=>({area:area.name,description:area.description,text:q})));
   let index=0, answers=Array(questions.length).fill(null), riskAnswer=null;
   const safe=(str)=>String(str).replace(/[&<>"']/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
