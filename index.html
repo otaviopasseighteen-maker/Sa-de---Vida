@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="wellness.css">
   <link rel="stylesheet" href="dashboard.css">
+  <link rel="stylesheet" href="screening.css">
 </head>
 <body>
   <header class="site-header">
@@ -221,22 +222,14 @@
       <div id="wellness-dashboard" aria-live="polite"><p class="dashboard-empty">Carregando seu resumo semanal…</p></div>
     </section>
 
-    <section class="research section dark-section" id="pesquisa">
-      <div class="research-copy">
-        <p class="eyebrow">05 / PESQUISA</p>
-        <h2>Como as pessoas<br><span>se relacionam com a tecnologia?</span></h2>
-        <p>
-          Esta área será usada para reunir dados, percepções e depoimentos.
-          A ideia é transformar o site em uma experiência informativa construída
-          também a partir da realidade das pessoas.
-        </p>
-        <a class="button primary" href="#pesquisa">Participar em breve</a>
+    <section class="emotional-screening section dark-section" id="pesquisa">
+      <div class="section-heading compact">
+        <p class="eyebrow">05 / PESQUISA • BEM-ESTAR</p>
+        <h2>Como você tem se sentido <span>de verdade?</span></h2>
+        <p>Uma autoavaliação guiada para refletir sobre seu humor, preocupações, sono, estresse e conexões. Não é um diagnóstico, e suas respostas não são armazenadas nem enviadas.</p>
       </div>
-
-      <div class="research-box">
-        <span class="big-number">?</span>
-        <p>VOCÊ SABE<br><strong>QUANTO USA?</strong></p>
-        <small>Pesquisa em construção</small>
+      <div id="emotional-screening" aria-live="polite" aria-atomic="true">
+        <p class="dashboard-empty">Preparando sua autoavaliação…</p>
       </div>
     </section>
 
@@ -259,5 +252,6 @@
   <script src="script.js"></script>
   <script src="wellness.js"></script>
   <script src="dashboard.js"></script>
+  <script src="screening.js"></script>
 </body>
 </html>

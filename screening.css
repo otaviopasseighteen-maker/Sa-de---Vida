@@ -1,0 +1,21 @@
+/* Pesquisa de bem-estar emocional — módulo independente e responsivo */
+.emotional-screening{max-width:var(--max,1200px);margin:0 auto;padding:90px 5vw}
+.screening-shell{border:1px solid var(--line,#303844);border-radius:22px;background:linear-gradient(145deg,var(--panel,#121821),#0b1018);padding:clamp(18px,4vw,34px)}
+.screening-top{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap;color:var(--muted,#9aa6b6);font-size:.85rem}
+.screening-progress{height:8px;background:#26303c;border-radius:20px;overflow:hidden;margin:14px 0 26px}.screening-progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,#8f86ff,#42d9c8);transition:width .25s}
+.screening-question{font:600 clamp(1.25rem,3vw,1.8rem)/1.3 "Space Grotesk",sans-serif;margin:12px 0 22px}
+.screening-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.screening-option{padding:15px;text-align:left;border:1px solid var(--line,#303844);border-radius:12px;background:#0b1018;color:var(--text,#edf1f6);cursor:pointer;transition:border-color .2s,background .2s}
+.screening-option:hover,.screening-option:focus-visible{border-color:#42d9c8;outline:none}.screening-option[aria-pressed=true]{border-color:#42d9c8;background:rgba(66,217,200,.12);box-shadow:inset 0 0 0 1px rgba(66,217,200,.18)}
+.screening-controls{display:flex;justify-content:space-between;gap:12px;margin-top:22px}.screening-controls button,.screening-restart{border:1px solid var(--line,#303844);border-radius:10px;padding:12px 18px;background:#202936;color:var(--text,#edf1f6);font-weight:700;cursor:pointer}.screening-controls button:disabled{opacity:.4;cursor:not-allowed}.screening-controls .next{background:var(--white,#fff);color:#0b1018;border-color:transparent}
+.screening-note{font-size:.82rem;color:var(--muted,#9aa6b6);margin-top:18px;line-height:1.6}
+.screening-results{display:grid;gap:14px;margin-top:20px}.screening-result-card{border:1px solid var(--line,#303844);border-radius:14px;padding:16px;background:rgba(255,255,255,.025)}
+.screening-result-head{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:10px}.screening-result-head strong{font-size:1rem}.screening-meter{height:9px;border-radius:20px;background:#26303c;overflow:hidden}.screening-meter span{display:block;height:100%;border-radius:20px;background:linear-gradient(90deg,#42d9c8,#8f86ff)}
+.screening-result-card p,.screening-report p{color:var(--muted,#9aa6b6);font-size:.9rem;line-height:1.6;margin:9px 0 0}
+.screening-report{border:1px solid rgba(66,217,200,.25);border-radius:16px;padding:20px;background:rgba(66,217,200,.055);margin-top:18px}
+.screening-alert{border:1px solid rgba(226,156,76,.4);border-radius:14px;background:rgba(226,156,76,.08);padding:16px;margin-top:16px}
+.screening-alert h3{margin-top:0}.screening-alert p{line-height:1.6}
+.screening-results-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.screening-results-actions button{border:1px solid var(--line,#303844);border-radius:10px;padding:12px 18px;background:#202936;color:var(--text,#edf1f6);font-weight:700;cursor:pointer}
+@media(max-width:620px){.emotional-screening{padding:70px 5vw}.screening-options{grid-template-columns:1fr}.screening-controls button{flex:1}.screening-shell{padding:18px}}
+@media(prefers-reduced-motion:reduce){.screening-progress span,.screening-option{transition:none}}
