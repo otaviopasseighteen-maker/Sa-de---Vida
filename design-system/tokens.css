@@ -1,45 +1,51 @@
 /*
  * Saúde & Vida — Design Tokens
- * Referência extraída da identidade visual existente.
- * Este arquivo não é importado pelos estilos da aplicação principal.
+ * Extraídos de style.css, wellness.css, dashboard.css e screening.css.
+ * Referência isolada: não é importada pela aplicação principal.
  */
-
 :root {
-  /* Color: backgrounds */
+  /* Fundos e superfícies */
   --sv-color-bg: #07090d;
   --sv-color-bg-soft: #0d1118;
-
-  /* Color: surfaces */
   --sv-color-panel: #111722;
   --sv-color-panel-light: #151c28;
+  --sv-color-panel-deep: #0a0e15;
+  --sv-color-field: #080c12;
+  --sv-color-panel-gradient-end: #0b0f16;
 
-  /* Color: text */
+  /* Texto */
   --sv-color-text: #f4f7fb;
   --sv-color-muted: #9da8b8;
+  --sv-color-muted-strong: #b9c1ce;
+  --sv-color-muted-soft: #8b96a6;
   --sv-color-white: #ffffff;
 
-  /* Color: accents */
+  /* Identidade e acentos */
   --sv-color-accent: #7c6cff;
+  --sv-color-accent-soft: #8f86ff;
+  --sv-color-accent-heading: #b9b3ff;
   --sv-color-accent-2: #42d9c8;
 
-  /* Color: borders and overlays */
+  /* Linhas e estados */
   --sv-color-line: rgba(255, 255, 255, 0.09);
-  --sv-color-overlay: rgba(7, 9, 13, 0.76);
+  --sv-color-line-soft: rgba(255, 255, 255, 0.06);
+  --sv-color-selected-bg: rgba(66, 217, 200, 0.10);
+  --sv-color-warning: #e29c4c;
 
-  /* Typography */
+  /* Tipografia */
   --sv-font-body: "DM Sans", sans-serif;
   --sv-font-heading: "Space Grotesk", sans-serif;
-  --sv-font-size-xs: 0.75rem;
-  --sv-font-size-sm: 0.875rem;
+  --sv-font-size-xs: 0.72rem;
+  --sv-font-size-sm: 0.88rem;
   --sv-font-size-md: 1rem;
-  --sv-font-size-lg: 1.125rem;
-  --sv-font-size-xl: 1.5rem;
-  --sv-font-size-2xl: 2rem;
-  --sv-font-size-display: clamp(2.5rem, 6vw, 4.75rem);
+  --sv-font-size-lg: 1.08rem;
+  --sv-font-size-xl: 1.45rem;
+  --sv-font-size-2xl: clamp(2.3rem, 5vw, 4.6rem);
+  --sv-font-size-display: clamp(3.1rem, 7vw, 6.7rem);
   --sv-line-height-body: 1.6;
-  --sv-line-height-heading: 1.12;
+  --sv-line-height-heading: 1.05;
 
-  /* Spacing: 4px base scale */
+  /* Espaçamento */
   --sv-space-1: 0.25rem;
   --sv-space-2: 0.5rem;
   --sv-space-3: 0.75rem;
@@ -51,23 +57,28 @@
   --sv-space-12: 3rem;
   --sv-space-16: 4rem;
 
-  /* Shape and elevation */
+  /* Formas */
   --sv-radius-sm: 0.625rem;
-  --sv-radius-md: 1rem;
-  --sv-radius-lg: 1.375rem;
-  --sv-radius-xl: 1.75rem;
+  --sv-radius-md: 0.8125rem;
+  --sv-radius-lg: 1.125rem;
+  --sv-radius-xl: 1.25rem;
+  --sv-radius-2xl: 1.375rem;
   --sv-radius-pill: 999px;
-  --sv-shadow-panel: 0 18px 50px rgba(0, 0, 0, 0.22);
-  --sv-shadow-accent: 0 12px 34px rgba(124, 108, 255, 0.18);
 
-  /* Layout */
+  /* Elevação e layout */
+  --sv-shadow-panel: 0 18px 50px rgba(0, 0, 0, 0.22);
+  --sv-shadow-orbit: 0 0 100px rgba(124, 108, 255, 0.14);
   --sv-layout-max-width: 1180px;
-  --sv-layout-gutter: clamp(1rem, 4vw, 2rem);
-  --sv-breakpoint-tablet: 850px;
+  --sv-layout-gutter: 5vw;
+
+  /* Breakpoints observados nos CSS */
+  --sv-breakpoint-desktop: 850px;
+  --sv-breakpoint-wellness: 760px;
+  --sv-breakpoint-screening: 620px;
   --sv-breakpoint-mobile: 520px;
 
-  /* Motion */
-  --sv-motion-fast: 140ms;
-  --sv-motion-standard: 220ms;
-  --sv-ease-standard: cubic-bezier(0.2, 0.7, 0.2, 1);
+  /* Movimento */
+  --sv-motion-fast: 0.2s;
+  --sv-motion-standard: 0.25s;
+  --sv-motion-slow: 0.3s;
 }
