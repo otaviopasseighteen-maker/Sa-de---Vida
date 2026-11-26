@@ -1,35 +1,62 @@
 # Saúde & Vida — Design System
 
-Este diretório documenta o sistema visual existente do site Saúde & Vida. O objetivo é organizar e tornar reutilizáveis as decisões de design já presentes no projeto, sem redesenhar o produto nem alterar sua implementação atual.
+Sistema de referência visual e de interface do produto **Saúde & Vida**. Esta versão organiza a identidade já presente no site e oferece uma biblioteca visual independente para consulta, validação e evolução consistente.
+
+> **Escopo seguro:** todo o material deste Design System vive em `design-system/` na branch `design-system`. A demonstração não é importada pelo site, não altera os estilos existentes e não substitui os CSS atuais.
+
+## Comece por aqui
+
+- [Preview visual](preview/index.html) — catálogo navegável de cores, tipografia, componentes e padrões.
+- [Tokens CSS](tokens.css) — variáveis de design de referência.
+- [Fundamentos](foundations/) — cor, tipografia, espaçamento e efeitos.
+- [Componentes](components/) — especificações, anatomia, variantes e estados.
+- [Padrões de interface](patterns/) — composição de dashboard, wellness e screening.
+- [Acessibilidade](accessibility/guidelines.md) — checklist de qualidade e inclusão.
+- [Diretrizes gerais](guidelines.md) — regras de consistência e responsividade.
 
 ## Princípios
 
-- **Preservar a identidade atual:** tema escuro, roxo e verde-água como cores de destaque.
-- **Consistência:** reutilizar tokens para cores, tipografia, espaçamento e superfícies.
-- **Acessibilidade:** manter contraste legível, foco visível e respeito à preferência por movimento reduzido.
-- **Responsividade:** documentar padrões que funcionem em telas grandes e pequenas.
-- **Evolução segura:** esta documentação vive em uma branch separada e não modifica os arquivos existentes do site.
+1. **Fidelidade:** documentar primeiro o que existe; não inventar uma nova identidade.
+2. **Consistência:** usar tokens para reduzir decisões visuais divergentes.
+3. **Clareza:** hierarquia visual, conteúdo legível e ações previsíveis.
+4. **Acessibilidade:** foco visível, contraste, semântica e movimento reduzido.
+5. **Responsividade:** padrões que funcionem em telas amplas e estreitas.
+6. **Evolução segura:** documentação e preview independentes da aplicação principal.
+
+## Identidade observada
+
+- Tema escuro com fundos azulados quase pretos.
+- Roxo como acento principal e verde-água como acento complementar.
+- DM Sans para texto e Space Grotesk para títulos e números.
+- Cards com superfícies escuras, contornos discretos e cantos arredondados.
+- Gradientes e brilhos usados como detalhes, não como substitutos de hierarquia.
+
+Os valores de referência estão em [tokens.css](tokens.css). Os arquivos originais analisados foram `index.html`, `style.css`, `wellness.css`, `dashboard.css` e `screening.css`.
 
 ## Estrutura
 
-- `tokens.css`: variáveis visuais extraídas dos estilos atuais.
-- `components.md`: inventário dos componentes identificados no HTML e nas folhas CSS.
-- `guidelines.md`: orientações de uso, responsividade e acessibilidade.
+```text
+design-system/
+├── README.md
+├── tokens.css
+├── guidelines.md
+├── foundations/
+├── components/
+├── patterns/
+├── accessibility/
+└── preview/
+    └── index.html
+```
 
-## Fontes analisadas
+## Como usar este material
 
-- `index.html`
-- `style.css`
-- `wellness.css`
-- `dashboard.css`
-- `screening.css`
+- Consulte os fundamentos antes de criar uma nova tela.
+- Prefira os tokens existentes em vez de valores avulsos.
+- Escolha componentes e padrões documentados antes de criar variantes.
+- Registre novos estados e decisões quando um componente evoluir.
+- Valide o resultado no preview e em larguras móveis.
+- Não conecte este material à aplicação principal sem uma tarefa específica e revisão.
 
-Os estilos originais permanecem como fonte de verdade para o comportamento atual do site. Este Design System é uma documentação organizada da identidade existente; não é uma substituição automática dos CSS atuais.
+## Limites conhecidos
 
-## Como evoluir
-
-1. Ao identificar um padrão visual recorrente, documente-o antes de criar uma variação.
-2. Prefira os tokens definidos em `tokens.css` em novos componentes.
-3. Registre estados importantes (padrão, hover, foco, desabilitado, selecionado).
-4. Confira contraste, teclado, telas menores e `prefers-reduced-motion`.
-5. Não altere os arquivos da aplicação sem uma tarefa específica de implementação e revisão.
+Este pacote é uma documentação e uma biblioteca visual de referência. Não é ainda uma biblioteca de componentes de produção, não contém testes automatizados integrados ao site e não altera o comportamento funcional das páginas existentes.
