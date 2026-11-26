@@ -1,37 +1,73 @@
 /*
  * Saúde & Vida — Design Tokens
- * Extraídos da identidade visual existente em style.css.
- * Arquivo de referência/documentação; não é importado pelo site atual.
+ * Referência extraída da identidade visual existente.
+ * Este arquivo não é importado pelos estilos da aplicação principal.
  */
 
 :root {
-  /* Cores de fundo e superfícies */
+  /* Color: backgrounds */
   --sv-color-bg: #07090d;
   --sv-color-bg-soft: #0d1118;
+
+  /* Color: surfaces */
   --sv-color-panel: #111722;
   --sv-color-panel-light: #151c28;
 
-  /* Texto */
+  /* Color: text */
   --sv-color-text: #f4f7fb;
   --sv-color-muted: #9da8b8;
   --sv-color-white: #ffffff;
 
-  /* Acentos */
+  /* Color: accents */
   --sv-color-accent: #7c6cff;
   --sv-color-accent-2: #42d9c8;
 
-  /* Bordas e layout */
+  /* Color: borders and overlays */
   --sv-color-line: rgba(255, 255, 255, 0.09);
-  --sv-layout-max-width: 1180px;
+  --sv-color-overlay: rgba(7, 9, 13, 0.76);
 
-  /*
-   * Tipografia observada:
-   * - DM Sans: textos e corpo.
-   * - Space Grotesk: títulos, marca e números destacados.
-   *
-   * As famílias são declaradas como tokens para orientar novos componentes.
-   * O carregamento das fontes continua sob responsabilidade da aplicação.
-   */
+  /* Typography */
   --sv-font-body: "DM Sans", sans-serif;
   --sv-font-heading: "Space Grotesk", sans-serif;
+  --sv-font-size-xs: 0.75rem;
+  --sv-font-size-sm: 0.875rem;
+  --sv-font-size-md: 1rem;
+  --sv-font-size-lg: 1.125rem;
+  --sv-font-size-xl: 1.5rem;
+  --sv-font-size-2xl: 2rem;
+  --sv-font-size-display: clamp(2.5rem, 6vw, 4.75rem);
+  --sv-line-height-body: 1.6;
+  --sv-line-height-heading: 1.12;
+
+  /* Spacing: 4px base scale */
+  --sv-space-1: 0.25rem;
+  --sv-space-2: 0.5rem;
+  --sv-space-3: 0.75rem;
+  --sv-space-4: 1rem;
+  --sv-space-5: 1.25rem;
+  --sv-space-6: 1.5rem;
+  --sv-space-8: 2rem;
+  --sv-space-10: 2.5rem;
+  --sv-space-12: 3rem;
+  --sv-space-16: 4rem;
+
+  /* Shape and elevation */
+  --sv-radius-sm: 0.625rem;
+  --sv-radius-md: 1rem;
+  --sv-radius-lg: 1.375rem;
+  --sv-radius-xl: 1.75rem;
+  --sv-radius-pill: 999px;
+  --sv-shadow-panel: 0 18px 50px rgba(0, 0, 0, 0.22);
+  --sv-shadow-accent: 0 12px 34px rgba(124, 108, 255, 0.18);
+
+  /* Layout */
+  --sv-layout-max-width: 1180px;
+  --sv-layout-gutter: clamp(1rem, 4vw, 2rem);
+  --sv-breakpoint-tablet: 850px;
+  --sv-breakpoint-mobile: 520px;
+
+  /* Motion */
+  --sv-motion-fast: 140ms;
+  --sv-motion-standard: 220ms;
+  --sv-ease-standard: cubic-bezier(0.2, 0.7, 0.2, 1);
 }
