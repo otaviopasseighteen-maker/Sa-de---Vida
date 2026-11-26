@@ -1,0 +1,37 @@
+/*
+ * Saúde & Vida — Design Tokens
+ * Extraídos da identidade visual existente em style.css.
+ * Arquivo de referência/documentação; não é importado pelo site atual.
+ */
+
+:root {
+  /* Cores de fundo e superfícies */
+  --sv-color-bg: #07090d;
+  --sv-color-bg-soft: #0d1118;
+  --sv-color-panel: #111722;
+  --sv-color-panel-light: #151c28;
+
+  /* Texto */
+  --sv-color-text: #f4f7fb;
+  --sv-color-muted: #9da8b8;
+  --sv-color-white: #ffffff;
+
+  /* Acentos */
+  --sv-color-accent: #7c6cff;
+  --sv-color-accent-2: #42d9c8;
+
+  /* Bordas e layout */
+  --sv-color-line: rgba(255, 255, 255, 0.09);
+  --sv-layout-max-width: 1180px;
+
+  /*
+   * Tipografia observada:
+   * - DM Sans: textos e corpo.
+   * - Space Grotesk: títulos, marca e números destacados.
+   *
+   * As famílias são declaradas como tokens para orientar novos componentes.
+   * O carregamento das fontes continua sob responsabilidade da aplicação.
+   */
+  --sv-font-body: "DM Sans", sans-serif;
+  --sv-font-heading: "Space Grotesk", sans-serif;
+}
