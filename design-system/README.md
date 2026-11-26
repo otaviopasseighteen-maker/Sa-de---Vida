@@ -6,7 +6,8 @@ Sistema de referência visual e de interface do produto **Saúde & Vida**. Esta 
 
 ## Comece por aqui
 
-- [Preview visual](preview/index.html) — catálogo navegável de cores, tipografia, componentes e padrões.
+- [Preview visual](preview/index.html) — catálogo visual fiel à interface implementada, com componentes demonstrativos.
+- [Roteiro de apresentação](presentation.md) — sequência sugerida e fala de apoio para apresentar o projeto.
 - [Tokens CSS](tokens.css) — variáveis de design de referência.
 - [Fundamentos](foundations/) — cor, tipografia, espaçamento e efeitos.
 - [Componentes](components/) — especificações, anatomia, variantes e estados.
