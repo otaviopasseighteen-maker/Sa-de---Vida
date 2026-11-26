@@ -1,54 +1,44 @@
-# Diretrizes visuais
+# Diretrizes de uso
 
-## Identidade
+## Identidade e hierarquia
 
-A interface existente utiliza tema escuro, superfícies em tons de azul/preto, texto claro e dois acentos principais: roxo e verde-água. O conjunto transmite uma aparência digital, contemporânea e voltada ao bem-estar.
+A interface usa tema escuro, superfícies azuladas quase pretas, texto claro e acentos roxo e verde-água. Preserve a hierarquia: título principal, contexto, conteúdo e ação. Use gradientes, brilhos e elementos orbitais com moderação.
 
-## Cores
+## Tokens
 
-- Use o fundo principal para a base da página.
-- Use superfícies soft/panel para separar áreas de conteúdo.
-- Use o roxo como acento de destaque e ação principal.
-- Use o verde-água como acento complementar.
-- Use o texto muted para informações secundárias, sem comprometer a legibilidade.
-- Use bordas discretas para separar superfícies sem criar ruído visual.
-
-Consulte os valores oficiais em `tokens.css`.
+Consulte [tokens.css](tokens.css) para cores, tipografia, escala de espaçamento, raios, sombras, layout e movimento. Os tokens são referência para novas implementações; não substituem automaticamente os valores dos estilos atuais.
 
 ## Tipografia
 
-- **DM Sans:** textos corridos, descrições, rótulos e conteúdo geral.
-- **Space Grotesk:** títulos, marca e números que precisem de maior destaque.
+- **DM Sans:** texto corrido, rótulos, descrições e conteúdo.
+- **Space Grotesk:** títulos, marca e números em destaque.
+- Mantenha linhas confortáveis e evite parágrafos longos em cards estreitos.
 
-Mantenha hierarquia clara entre título, subtítulo, corpo e metadados. Evite usar muitos pesos e tamanhos diferentes sem necessidade.
+## Superfícies e composição
 
-## Superfícies e componentes
-
-- Prefira cards com fundo escuro, bordas sutis e cantos arredondados.
-- Preserve a distinção entre ações primárias e secundárias.
-- Mantenha espaçamentos consistentes entre elementos relacionados.
-- Agrupe informações por assunto e evite excesso de elementos decorativos.
-- Use gradientes e brilhos como detalhes de identidade, não como substitutos de hierarquia ou contraste.
+- Cards usam superfícies escuras e contornos sutis.
+- Agrupe informações relacionadas.
+- Reserve o roxo para a ação principal e destaques; use o verde-água como apoio.
+- Diferencie ações primárias e secundárias.
+- Evite sombras ou gradientes que prejudiquem o contraste.
 
 ## Responsividade
 
-Os estilos atuais incluem adaptações em breakpoints próximos de 850px e 520px. Ao criar ou documentar novas variações:
+Os estilos existentes incluem adaptações próximas de 850px e 520px. Esses valores são referências observadas, não uma exigência rígida para toda nova tela.
 
-- evite rolagem horizontal não intencional;
-- permita que grades e cards se reorganizem em telas estreitas;
-- mantenha alvos de toque confortáveis;
-- preserve a leitura e a hierarquia do conteúdo;
-- teste navegação e formulários em dispositivos móveis.
+- Reorganize grades em uma coluna quando necessário.
+- Evite rolagem horizontal acidental.
+- Preserve áreas de toque confortáveis.
+- Verifique textos longos, formulários e navegação em viewport estreita.
+
+## Estados
+
+Para componentes interativos, especifique padrão, hover, foco visível, pressionado, selecionado, desabilitado, carregando, erro e sucesso quando aplicável. Não dependa apenas de cor para comunicar estado.
 
 ## Acessibilidade
 
-- Garanta contraste suficiente entre texto e fundo.
-- Não comunique estados apenas por cor.
-- Mantenha foco de teclado perceptível.
-- Associe rótulos aos campos de formulário.
-- Garanta que controles interativos possam ser usados por teclado.
-- Respeite `prefers-reduced-motion` e evite animações essenciais para compreender o conteúdo.
+Siga [accessibility/guidelines.md](accessibility/guidelines.md): semântica, teclado, rótulos, contraste e movimento reduzido.
 
 ## Regra de preservação
 
-Estas diretrizes documentam o design já existente. Não altere os estilos ou scripts da aplicação principal apenas para alinhar o código à documentação. Mudanças de implementação devem ser tratadas separadamente, com escopo e revisão próprios.
+Este material não deve ser importado pelo site atual sem uma tarefa específica. Não altere HTML, CSS, JavaScript, imagens ou configurações da aplicação principal apenas para alinhar a implementação à documentação.
